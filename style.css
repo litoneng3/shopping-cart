@@ -56,6 +56,10 @@ body{
 	background-color: #2FBE70;
 	border: none;
 }
+#welcome{
+	display: none;
+	color:red;
+}
 
 /* 
 //Plus button event handler

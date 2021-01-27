@@ -77,6 +77,9 @@
          </div>
       </div>
    </section>
+   <section id="welcome" class="text-center">
+      <h1>Thanks for shopping from our Website.</h1>
+   </section>
 
    <script>
       function increasePlus(id) {
@@ -157,6 +160,12 @@
       removeBtn2.addEventListener('click', function () {
          const cart1 = document.getElementById('cart2');
          cart1.style.display = 'none';
+      });
+
+      const checkout= document.getElementById('checkout');
+      checkout.addEventListener('click', function(){
+         document.getElementById('main-section').style.display='none';
+         document.getElementById('welcome').style.display='block';
       });
 
    </script>
