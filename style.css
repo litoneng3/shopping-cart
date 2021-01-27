@@ -1,0 +1,164 @@
+body{
+	background: #fff;
+}
+.cart{
+	margin: 100px 0;
+	background-color: #F6F5FA;;
+	padding: 60px 0;
+}
+.total-price{
+	padding-bottom: 15px;
+}
+.cart-item{
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 15px 20px;
+	margin-bottom: 20px;
+}
+.center-item{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.cart-item img{
+	width: 115px;
+}
+.cart-item h5{
+    padding: 0 45px;
+}
+.cart-item .remove-item{
+	width: 25px!important;
+}
+.btn-default{
+	background-color: #fff;
+}
+.cart-item .form-control{
+	background-color: #F6F5FA;
+	border: none;
+    width: 65px;
+    border-radius: 10px!important;
+    font-weight: 700;
+    font-size: 20px;
+}
+.input-group{
+	width: unset;
+}
+.status{
+	text-align: right;
+}
+.check-out{
+    float: right;
+    padding: 10px 30px;
+	font-size: 19px;
+	background-color: #2FBE70;
+	border: none;
+}
+
+/* 
+//Plus button event handler
+const plusBtn = document.getElementById('plus');
+plusBtn.addEventListener('click', function () {
+   var iconAmount = document.getElementById('iconAmount').value;
+   var iconNumber = parseFloat(iconAmount);
+   iconNumber++;
+   document.getElementById('iconAmount').value = iconNumber;
+
+   var phonePrice = document.getElementById('phonePrice').innerText;
+   var phonePriceNumber = parseFloat(phonePrice);
+   phonePriceNumber = phonePriceNumber + 1219;
+   document.getElementById('phonePrice').innerText = phonePriceNumber;
+
+   var subTotal = document.getElementById('subtotal').innerText;
+   var subTotalNumber = parseFloat(subTotal);
+   subTotalNumber = subTotalNumber + 1219;
+   document.getElementById('subtotal').innerText = subTotalNumber;
+
+   var tax = document.getElementById('tax').innerText;
+   var taxNumber = parseFloat(tax);
+
+   var total = document.getElementById('total').innerText;
+   var totalNumber = parseFloat(total);
+   totalNumber = subTotalNumber + taxNumber;
+   document.getElementById('total').innerText= totalNumber;
+});
+//Minus button event handler
+const minusBtn = document.getElementById('minus');
+minusBtn.addEventListener('click', function () {
+   var iconAmount = document.getElementById('iconAmount').value;
+   var iconNumber = parseFloat(iconAmount);
+   iconNumber--;
+   document.getElementById('iconAmount').value = iconNumber;
+
+   var phonePrice = document.getElementById('phonePrice').innerText;
+   var phonePriceNumber = parseFloat(phonePrice);
+   phonePriceNumber = phonePriceNumber - 1219;
+   console.log(phonePriceNumber);
+   document.getElementById('phonePrice').innerText = phonePriceNumber;
+
+   var subTotal = document.getElementById('subtotal').innerText;
+   var subTotalNumber = parseFloat(subTotal);
+   subTotalNumber = subTotalNumber - 1219;
+   document.getElementById('subtotal').innerText = subTotalNumber;
+
+   var tax = document.getElementById('tax').innerText;
+   var taxNumber = parseFloat(tax);
+
+   var total = document.getElementById('total').innerText;
+   var totalNumber = parseFloat(total);
+   totalNumber = subTotalNumber + taxNumber;
+   document.getElementById('total').innerText= totalNumber;
+});
+
+//phone cover plus button event handler
+const coverPlusBtn = document.getElementById('cover-plus');
+coverPlusBtn.addEventListener('click', function () {
+   var iconAmount = document.getElementById('cover-iconAmount').value;
+   var iconNumber = parseFloat(iconAmount);
+   iconNumber++;
+   document.getElementById('cover-iconAmount').value = iconNumber;
+
+   var coverPrice = document.getElementById('cover-price').innerText;
+   var coverPriceNumber = parseFloat(coverPrice);
+   coverPriceNumber = coverPriceNumber + 59;
+   document.getElementById('cover-price').innerText = coverPriceNumber;
+
+   var subTotal = document.getElementById('subtotal').innerText;
+   var subTotalNumber = parseFloat(subTotal);
+   subTotalNumber = subTotalNumber + 59;
+   document.getElementById('subtotal').innerText = subTotalNumber;
+
+   var tax = document.getElementById('tax').innerText;
+   var taxNumber = parseFloat(tax);
+
+   var total = document.getElementById('total').innerText;
+   var totalNumber = parseFloat(total);
+   totalNumber = subTotalNumber + taxNumber;
+   document.getElementById('total').innerText= totalNumber;
+});
+
+ //phone cover minus button event handler
+ const coverMinusBtn = document.getElementById('cover-minus');
+ coverMinusBtn.addEventListener('click', function () {
+   var iconAmount = document.getElementById('cover-iconAmount').value;
+   var iconNumber = parseFloat(iconAmount);
+   iconNumber--;
+   document.getElementById('cover-iconAmount').value = iconNumber;
+
+   var coverPrice = document.getElementById('cover-price').innerText;
+   var coverPriceNumber = parseFloat(coverPrice);
+   coverPriceNumber = coverPriceNumber - 59;
+   document.getElementById('cover-price').innerText = coverPriceNumber;
+
+   var subTotal = document.getElementById('subtotal').innerText;
+   var subTotalNumber = parseFloat(subTotal);
+   subTotalNumber = subTotalNumber - 59;
+   document.getElementById('subtotal').innerText = subTotalNumber;
+
+   var tax = document.getElementById('tax').innerText;
+   var taxNumber = parseFloat(tax); */
+
+   /* var total = document.getElementById('total').innerText;
+   var totalNumber = parseFloat(total);
+   totalNumber = subTotalNumber + taxNumber;
+   document.getElementById('total').innerText= totalNumber;
+}); */

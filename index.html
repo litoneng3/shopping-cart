@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Shopping Cart</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
+   <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+   <section id="main-section">
+      <div class="container">
+         <div class="cart">
+            <div class="col-md-12 col-lg-10 mx-auto">
+               <div class="cart-item">
+                  <div class="row">
+                     <div class="col-md-7 center-item">
+                        <img src="images/product-1.png" alt="">
+                        <h5>iPhone 11 128GB Black</h5>
+                     </div>
+
+                     <div class="col-md-5 center-item">
+                        <div class="input-group number-spinner">
+                           <button id="minus" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input id="iconAmount" type="text" class="form-control text-center" value="1">
+                           <button id="plus" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <h5>$ <span id="phonePrice">1219</span></h5>
+                        <img src="images/remove.png" alt="" class="remove-item">
+                     </div>
+                  </div>
+               </div>
+
+               <div class="cart-item">
+                  <div class="row">
+                     <div class="col-md-7 center-item mx-auto">
+                        <img src="images/product-2.png" alt="">
+                        <h5>iPhone 11 Silicone Case - Black</h5>
+                     </div>
+                     <div class="col-md-5 center-item">
+                        <div class="input-group number-spinner">
+                           <button id="cover-minus" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input id="cover-iconAmount" type="text" class="form-control text-center" value="1">
+                           <button id="cover-plus" class="btn btn-default"><i class="fas fa-plus"></i></button>
+
+                        </div>
+                        <h5>$ <span id="cover-price">59</span></h5>
+                        <img src="images/remove.png" alt="" class="remove-item">
+                     </div>
+                  </div>
+               </div>
+
+               <div class="cart-item">
+                  <div class="row">
+
+                     <div class="col-md-8">
+                        <h5>Subtotal: </h5>
+                        <h5>Tax:</h5>
+                        <h5>Total:</h5>
+                     </div>
+
+                     <div class="col-md-4 status">
+                        <h5>$ <span id="subtotal">1278</span></h5>
+                        <h5>$ <span id="tax">0</span></h5>
+                        <h5>$ <span id="total">1278</span></h5>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-12 pt-4 pb-4">
+                  <button id="checkout" type="button" class="btn btn-success check-out">Check Out</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <script>
+      function increasePlus(id) {
+         var iconAmount = document.getElementById(id).value;
+         var iconNumber = parseFloat(iconAmount);
+         iconNumber++;
+         document.getElementById(id).value = iconNumber;
+      }
+
+      function decreaseMinus(id) {
+         var iconAmount = document.getElementById(id).value;
+         var iconNumber = parseFloat(iconAmount);
+         iconNumber--;
+         document.getElementById(id).value = iconNumber;
+      }
+
+      function updatePhoneValue(id, price) {
+         var phonePrice = document.getElementById(id).innerText;
+         var phonePriceNumber = parseFloat(phonePrice);
+         phonePriceNumber = phonePriceNumber + price;
+         document.getElementById(id).innerText = phonePriceNumber;
+      }
+
+      function updateSubTotalAndTaxAndTotal(idSub, idTax, idTotal, price) {
+         var subTotal = document.getElementById(idSub).innerText;
+         var subTotalNumber = parseFloat(subTotal);
+         subTotalNumber = subTotalNumber + price;
+         document.getElementById(idSub).innerText = subTotalNumber;
+
+         var tax = document.getElementById(idTax).innerText;
+         var taxNumber = parseFloat(tax);
+
+         var total = document.getElementById(idTotal).innerText;
+         var totalNumber = parseFloat(total);
+         totalNumber = subTotalNumber + taxNumber;
+         document.getElementById(idTotal).innerText = totalNumber;
+      }
+      //Phone Plus button event handler
+      const plusBtn = document.getElementById('plus');
+      plusBtn.addEventListener('click', function () {
+         increasePlus('iconAmount');
+         const phonePrice = 1219;
+         updatePhoneValue('phonePrice', phonePrice);
+         updateSubTotalAndTaxAndTotal('subtotal', 'tax', 'total', phonePrice);
+      });
+      //Phone Minus button event handler
+      const minusBtn = document.getElementById('minus');
+      minusBtn.addEventListener('click', function () {
+         decreaseMinus('iconAmount');
+         const phonePrice = 1219;
+         updatePhoneValue('phonePrice', -1 * phonePrice);
+         updateSubTotalAndTaxAndTotal('subtotal', 'tax', 'total', -1 * phonePrice);
+      });
+
+      //phone cover plus button event handler
+      const coverPlusBtn = document.getElementById('cover-plus');
+      coverPlusBtn.addEventListener('click', function () {
+         increasePlus('cover-iconAmount');
+         const coverPrice = 59;
+         updatePhoneValue('cover-price', coverPrice);
+         updateSubTotalAndTaxAndTotal('subtotal', 'tax', 'total', coverPrice);
+      });
+
+      //phone cover minus button event handler
+      const coverMinusBtn = document.getElementById('cover-minus');
+      coverMinusBtn.addEventListener('click', function () {
+         decreaseMinus('cover-iconAmount');
+         const coverPrice = 59;
+         updatePhoneValue('cover-price', -1 * coverPrice);
+         updateSubTotalAndTaxAndTotal('subtotal', 'tax', 'total', -1 * coverPrice);
+      });
+
+
+   </script>
+</body>
+
+</html>
